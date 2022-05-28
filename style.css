@@ -16,6 +16,15 @@
   src: url(./assets/fonts/Southampton-MRqp.ttf);
 }
 
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
+
 body {
   height: 100vh;
 }
@@ -75,6 +84,7 @@ body {
 .add-book > button:hover {
   color: var(--neutral-clr-100);
   background-color: var(--primary-clr-100);
+  animation: bounce 0.8s infinite alternate;
   transition: background-color 0.2s ease-in;
 }
 
