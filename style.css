@@ -1,8 +1,12 @@
 @import url(reset.css);
 
+:root {
+  --neutral-clr-100: #fff;
+  --neutral-clr-500: #d4d4d9;
+}
+
 body {
   height: 100vh;
-  background-color: blue;
 }
 
 .main-content {
@@ -12,17 +16,17 @@ body {
 }
 
 .header {
-  background-color: red;
+  background-color: var(--neutral-clr-100);
   grid-row: 1 / 2;
 }
 
 .content {
-  background-color: black;
+  background-color: var(--neutral-clr-500);
   grid-row: 2 / 3;
 }
 
 .footer {
-  background-color: orange;
+  background-color: var(--neutral-clr-500);
   grid-row: 3 / 4;
   display: flex;
   justify-content: center;
@@ -30,10 +34,10 @@ body {
 }
 
 a {
+  color: black;
+  text-decoration: none;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 15px;
-  color: black;
-  text-decoration: none;
+  gap: 1.1rem;
 }
