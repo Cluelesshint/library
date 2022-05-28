@@ -1,9 +1,12 @@
 @import url(reset.css);
 
 :root {
+  --primary-clr-100: #9343d1;
+
   --neutral-clr-100: #fff;
   --neutral-clr-500: #f0f0f2;
   --neutral-clr-700: lightgrey;
+  --neutral-clr-900: #0b0b0b;
 
   --cust-font-1: "custy";
 }
@@ -41,27 +44,35 @@ body {
   min-height: 500px;
   min-width: 600px;
   background-color: var(--neutral-clr-500);
-  box-shadow: inset 0px 5px 10px black;
+  box-shadow: inset 0px 5px 10px var(--neutral-clr-900);
   grid-row: 2 / 3;
   display: flex;
   flex-direction: column;
 }
 
 .add-book {
-  height: 7%;
+  height: 10%;
   width: 100%;
   display: flex;
   justify-content: flex-start;
   align-items: flex-end;
-  padding-left: 1.2rem;
+  padding-left: 2.4rem;
 }
 
 .add-book > button {
-  border-style: solid;
+  border: 2px solid var(--primary-clr-100);
+  border-radius: 10px;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+  height: 2.2rem;
+  width: 6.4rem;
+  box-shadow: 0px 2px 5px var(--neutral-clr-900);
+  text-transform: uppercase;
 }
 
 .book-grid {
-  height: 93%;
+  height: 90%;
   width: 100%;
 }
 
