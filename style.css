@@ -1,0 +1,27 @@
+@import url(reset.css);
+
+body {
+  height: 100vh;
+  background-color: blue;
+}
+
+.main-content {
+  height: 100%;
+  display: grid;
+  grid-template-rows: 2fr 10fr 1fr;
+}
+
+.header {
+  background-color: red;
+  grid-row: 1 / 2;
+}
+
+.content {
+  background-color: black;
+  grid-row: 2 / 3;
+}
+
+.footer {
+  background-color: orange;
+  grid-row: 3 / 4;
+}
