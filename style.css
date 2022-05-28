@@ -2,7 +2,7 @@
 
 :root {
   --neutral-clr-100: #fff;
-  --neutral-clr-500: #d4d4d9;
+  --neutral-clr-500: #f0f0f2;
   --neutral-clr-700: lightgrey;
 
   --cust-font-1: "custy";
@@ -25,18 +25,24 @@ body {
 
 .header {
   background-color: var(--neutral-clr-100);
-  font-family: "custy";
-  font-size: 1.5rem;
   grid-row: 1 / 2;
   display: grid;
   justify-content: center;
   align-items: center;
 }
 
+.title {
+  font-family: "custy";
+  font-size: 2.7rem;
+  letter-spacing: 6px;
+}
+
 .content {
+  min-height: 500px;
+  min-width: 600px;
   background-color: var(--neutral-clr-500);
+  box-shadow: inset 0px 5px 10px black;
   grid-row: 2 / 3;
-  box-shadow: inset 0px 5px 5px black;
 }
 
 h1 {
