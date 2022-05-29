@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <script src="main.js" defer></script>
     <title>Library</title>
   </head>
   <body>
@@ -13,18 +14,19 @@
         <h1 class="title">Library</h1>
       </div>
       <div class="content">
-        <div class="new-book"><button>New Book</button></div>
+        <div class="new-book"><button id="new-book">New Book</button></div>
         <div class="book-grid"></div>
       </div>
     </div>
-    <div class="add-book-module-active">
+    <div id="module" class="add-book-module-active">
       <form action="#" class="form">
         <h3>Add Your Book</h3>
-        <input type="text" placeholder="Title" required />
-        <input type="text" placeholder="Author" required />
-        <input type="number" placeholder="Pages" required />
+        <input id="title" type="text" placeholder="Title" required />
+        <input id="author" type="text" placeholder="Author" required />
+        <input id="pages" type="number" placeholder="Pages" required />
         <div class="checkbox">
-          <span class="read">Have you read it?</span><input type="checkbox" />
+          <span class="read">Have you read it?</span
+          ><input id="checkbox" type="checkbox" />
         </div>
         <button type="submit">Submit</button>
       </form>
