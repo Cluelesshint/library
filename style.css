@@ -59,7 +59,7 @@ body {
   flex-direction: column;
 }
 
-.add-book {
+.new-book {
   height: 10%;
   width: 100%;
   display: flex;
@@ -67,7 +67,7 @@ body {
   align-items: flex-end;
 }
 
-.add-book > button {
+.new-book > button {
   height: 2.2rem;
   width: 7.6rem;
   border: 2px solid var(--primary-clr-100);
@@ -81,7 +81,7 @@ body {
   letter-spacing: 2px;
 }
 
-.add-book > button:hover {
+.new-book > button:hover {
   color: var(--neutral-clr-100);
   background-color: var(--primary-clr-100);
   animation: bounce 0.8s infinite alternate;
