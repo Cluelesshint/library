@@ -105,7 +105,7 @@ h1 {
   height: 390px;
   width: 300px;
   border-radius: 10px;
-  background-color: #ded5d5;
+  background-color: #f7f7f7;
   position: fixed;
   top: 50%;
   left: 50%;
@@ -117,7 +117,7 @@ h1 {
   height: 360px;
   width: 300px;
   border-radius: 10px;
-  background-color: #ded5d5;
+  background-color: #f7f7f7;
   position: fixed;
   top: 50%;
   left: 50%;
@@ -137,10 +137,17 @@ h1 {
 .form > input {
   height: 30px;
   width: 80%;
-  padding-top: 5px;
-  padding-bottom: 5px;
+  padding: 5px;
   margin-top: 10px;
   margin-bottom: 10px;
+  border-radius: 5px;
+  background: transparent;
+}
+
+button[type="submit"] {
+  margin-top: 30px;
+  height: 35px;
+  width: 60%;
 }
 .read {
   color: var(--neutral-clr-900);
@@ -152,6 +159,11 @@ h1 {
   display: flex;
   justify-content: space-around;
   align-items: center;
+}
+
+input[type="checkbox"] {
+  height: 15px;
+  width: 15px;
 }
 
 h3 {
