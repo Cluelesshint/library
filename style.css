@@ -97,3 +97,66 @@ h1 {
   margin: 0;
   padding-bottom: 20px;
 }
+
+/* Add Book Module */
+
+.add-book-module-active {
+  opacity: 1;
+  height: 390px;
+  width: 300px;
+  border-radius: 10px;
+  background-color: #ded5d5;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.add-book-module {
+  opacity: 0;
+  height: 360px;
+  width: 300px;
+  border-radius: 10px;
+  background-color: #ded5d5;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.form {
+  color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 20px;
+}
+
+.form > input {
+  height: 30px;
+  width: 80%;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.read {
+  color: var(--neutral-clr-900);
+}
+
+.checkbox {
+  margin-top: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+h3 {
+  margin: 0;
+  font-size: 1.9rem;
+  letter-spacing: 1px;
+  padding-bottom: 15px;
+}
