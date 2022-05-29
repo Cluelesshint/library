@@ -150,6 +150,7 @@ button[type="submit"] {
   height: 35px;
   width: 60%;
 }
+
 .read {
   color: var(--neutral-clr-900);
 }
