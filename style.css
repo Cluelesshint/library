@@ -34,6 +34,12 @@ body {
   min-width: 225px;
   display: grid;
   grid-template-rows: 100px 1fr;
+  transition: 0.2s ease-in;
+}
+
+.main-content.active {
+  transition: 0.2s ease-in;
+  opacity: 0.5;
 }
 
 .header {

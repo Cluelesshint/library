@@ -53,6 +53,15 @@ function getBookData() {
   return data;
 }
 
+function toggleDimBG() {
+  const main = document.querySelector(".main-content");
+  if (main.classList.contains("active")) {
+    main.classList.remove("active");
+  } else {
+    main.classList.add("active");
+  }
+}
+
 function clearBookInputs() {
   //clears all book module input fields, sets checked to false
 
@@ -145,6 +154,7 @@ document.onkeydown = function (e) {
   //check for escape key, if escape key deactivate the new book module
 
   if (e.key == "Escape") {
+    toggleDimBG();
     clearBookInputs();
     toggleNewBookModule("off");
   }
@@ -153,6 +163,7 @@ document.onkeydown = function (e) {
 newBook.addEventListener("click", (e) => {
   //check for if new book button has been clicked, if clicked activate the new book module
 
+  toggleDimBG();
   toggleNewBookModule("on");
 });
 
@@ -164,5 +175,6 @@ form.addEventListener("submit", (e) => {
   clearBookInputs();
   clearBookGrid();
   toggleNewBookModule("off");
+  toggleDimBG();
   displayBooks();
 });
