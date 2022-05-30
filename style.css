@@ -100,7 +100,7 @@ h1 {
 
 /* Add Book Module */
 
-.add-book-module-active {
+.add-book-module.active {
   opacity: 1;
   height: 390px;
   width: 300px;
