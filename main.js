@@ -19,10 +19,20 @@ function getBookInformation() {
   return data;
 }
 
+function clearBookInputs() {
+  //clears all book module input fields, sets checked to false
+
+  document.querySelector("#title").value = "";
+  document.querySelector("#author").value = "";
+  document.querySelector("#pages").value = "";
+  document.querySelector("#checkbox").checked = false;
+}
+
 document.onkeydown = function (e) {
   //check for escape key, if escape key deactivate the new book module
 
   if (e.key == "Escape") {
+    clearBookInputs();
     newBookModule.classList.remove("active");
   }
 };
@@ -34,6 +44,7 @@ newBook.addEventListener("click", (e) => {
 });
 
 form.addEventListener("submit", (e) => {
+  clearBookInputs();
   e.preventDefault();
   console.log(getBookInformation());
 });
