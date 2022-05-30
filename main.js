@@ -65,8 +65,9 @@ function toggleNewBookModule(onOrOff) {
   }
 }
 
-function createBookDiv(book) {
+function createBookDiv(book, index) {
   const bookDiv = document.createElement("div");
+  bookDiv.id = index;
   bookDiv.classList.add("book-div");
   const titleDiv = document.createElement("div");
   titleDiv.classList.add("book-title");
@@ -98,9 +99,11 @@ function createBookDiv(book) {
 }
 
 function displayBook() {
+  let index = 0;
   library.forEach((book) => {
-    bookDiv = createBookDiv(book);
+    bookDiv = createBookDiv(book, index);
     bookGrid.appendChild(bookDiv);
+    index++;
   });
 }
 
