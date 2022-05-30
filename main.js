@@ -23,16 +23,6 @@ function Book(title, author, pages, read) {
 
 let library = []; //book storage
 
-const book1 = Book("Title 1", "Author 1", 69, true);
-const book2 = Book("Title 2", "Author 2", 96, false);
-const book3 = Book("Title 3", "Author 3", 23, true);
-const book4 = Book("Title 4", "Author 4", 12, false);
-
-library.push(book1);
-library.push(book2);
-library.push(book3);
-library.push(book4);
-
 function getBookData() {
   //grab all book info from different inputs
 
@@ -113,8 +103,6 @@ document.onkeydown = function (e) {
   if (e.key == "Escape") {
     clearBookInputs();
     toggleNewBookModule("off");
-  } else if (e.key == "a") {
-    displayBook();
   }
 };
 
