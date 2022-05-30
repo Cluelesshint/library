@@ -67,6 +67,7 @@ function toggleNewBookModule(onOrOff) {
 
 function createBookDiv(book) {
   const bookDiv = document.createElement("div");
+  bookDiv.classList.add("book-div");
   const titleDiv = document.createElement("div");
   titleDiv.classList.add("book-title");
   titleDiv.innerHTML = book.title;
@@ -77,12 +78,13 @@ function createBookDiv(book) {
   pageDiv.classList.add("book-pages");
   pageDiv.innerHTML = book.pages;
   const readButton = document.createElement("button");
+  readButton.classList.add("read");
   if (book.readButton) {
-    readButton.classList.add("read true");
+    readButton.classList.add("true");
     readButton.innerHTML = "Read";
   } else {
-    readButton.classList.add("read false");
-    readButton.innerHTML = "Not Read";
+    readButton.classList.add("false");
+    readButton.innerHTML = "Not read";
   }
   const removeButton = document.createElement("button");
   removeButton.classList.add("remove");
@@ -98,6 +100,7 @@ function createBookDiv(book) {
 function displayBook() {
   library.forEach((book) => {
     bookDiv = createBookDiv(book);
+    bookGrid.appendChild(bookDiv);
   });
 }
 
@@ -108,7 +111,6 @@ document.onkeydown = function (e) {
     clearBookInputs();
     toggleNewBookModule("off");
   } else if (e.key == "a") {
-    console.log("displaying..");
     displayBook();
   }
 };
@@ -126,4 +128,5 @@ form.addEventListener("submit", (e) => {
   library.push(book);
   clearBookInputs();
   toggleNewBookModule("off");
+  displayBook();
 });
