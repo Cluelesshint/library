@@ -95,7 +95,7 @@ body {
   width: 90%;
   padding: 5px;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
   gap: 10px;
 }
 
@@ -108,7 +108,7 @@ h1 {
 
 .add-book-module.active {
   opacity: 1;
-  height: 390px;
+  min-height: 390px;
   width: 300px;
   border-radius: 10px;
   border: 2px solid var(--primary-clr-100);
@@ -185,23 +185,29 @@ h3 {
 /* Book Div Style */
 
 .book-div {
-  height: 250px;
-  width: 190px;
+  height: 300px;
+  width: 280px;
   background-color: var(--neutral-clr-100);
   box-shadow: 5px 5px 10px black;
   padding: 10px;
   border-radius: 10px;
-  gap: 10px;
+  gap: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  line-height: 1.2;
+  text-align: center;
 }
 
 .book-div > div {
   height: 15%;
+  width: 260px;
   font-size: 20px;
-  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 900;
+  display: inline-block;
+  word-wrap: break-word;
 }
 
 .book-div > button {

@@ -16,7 +16,7 @@ function Book(title, author, pages, read) {
 
 let library = []; //book storage
 
-const book1 = Book("Title1", "Author1", 344, true);
+const book1 = Book("John Guido's World", "John Guido", 18, true);
 library.push(book1);
 displayBooks();
 
