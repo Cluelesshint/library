@@ -97,6 +97,12 @@ function displayBook() {
   });
 }
 
+function clearBookGrid() {
+  while (bookGrid.lastChild) {
+    bookGrid.removeChild(bookGrid.lastChild);
+  }
+}
+
 document.onkeydown = function (e) {
   //check for escape key, if escape key deactivate the new book module
 
@@ -119,5 +125,6 @@ form.addEventListener("submit", (e) => {
   library.push(book);
   clearBookInputs();
   toggleNewBookModule("off");
+  clearBookGrid();
   displayBook();
 });
