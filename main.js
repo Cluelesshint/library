@@ -1,8 +1,12 @@
+//grab the main elements
+
 const form = document.querySelector(".form");
 const newBook = document.querySelector("#new-book");
 const newBookModule = document.querySelector("#module");
 
 function getBookInformation() {
+  //grab all book info from different inputs
+
   let data = [];
   const title = document.querySelector("#title").value;
   const author = document.querySelector("#author").value;
@@ -15,8 +19,18 @@ function getBookInformation() {
   return data;
 }
 
+document.onkeydown = function (e) {
+  //check for escape key, if escape key deactivate the new book module
+
+  if (e.key == "Escape") {
+    newBookModule.classList.remove("active");
+  }
+};
+
 newBook.addEventListener("click", (e) => {
-  console.log(e);
+  //check for if new book button has been clicked, if clicked activate the new book module
+
+  newBookModule.classList.add("active");
 });
 
 form.addEventListener("submit", (e) => {
