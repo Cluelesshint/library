@@ -153,6 +153,7 @@ h1 {
   margin-bottom: 10px;
   border-radius: 5px;
   background: transparent;
+  border: 1px solid var(--neutral-clr-900);
 }
 
 button[type="submit"] {
@@ -180,6 +181,7 @@ input[type="checkbox"] {
 
 h3 {
   margin: 0;
+  font-weight: 500;
   font-size: 1.9rem;
   letter-spacing: 1px;
   padding-bottom: 15px;
@@ -191,7 +193,7 @@ h3 {
   height: 300px;
   width: 280px;
   background-color: var(--neutral-clr-100);
-  box-shadow: 5px 5px 10px black;
+  box-shadow: 1px 1px 10px var(--primary-clr-100);
   padding: 10px;
   border-radius: 10px;
   gap: 20px;
@@ -216,7 +218,7 @@ h3 {
 .book-div > button {
   padding: 6px;
   width: 80%;
-  border: 2px solid var(--primary-clr-100);
+  border: 2px solid var(--neutral-clr-900);
   border-radius: 5px;
   cursor: pointer;
 }
