@@ -199,9 +199,10 @@ h3 {
   height: 300px;
   width: 280px;
   background-color: var(--neutral-clr-100);
-  box-shadow: 1px 1px 10px var(--primary-clr-100);
+  box-shadow: 1px 1px 10px var(--neutral-clr-900);
   padding: 10px;
   border-radius: 10px;
+  border: 2px solid var(--primary-clr-100);
   gap: 20px;
   display: flex;
   flex-direction: column;
@@ -224,7 +225,7 @@ h3 {
 .book-div > button {
   padding: 6px;
   width: 80%;
-  border: 2px solid var(--neutral-clr-900);
+  border: 2px solid var(--primary-clr-100);
   border-radius: 5px;
   cursor: pointer;
 }
