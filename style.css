@@ -96,7 +96,6 @@ body {
   padding: 5px;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
-  justify-content: center;
   gap: 10px;
 }
 
