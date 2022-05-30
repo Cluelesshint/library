@@ -1,8 +1,7 @@
 @import url(reset.css);
 
 :root {
-  --primary-clr-100: #9343d1;
-
+  --primary-clr-100: #6c3c91;
   --neutral-clr-100: #fff;
   --neutral-clr-500: #f0f0f2;
   --neutral-clr-700: lightgrey;
