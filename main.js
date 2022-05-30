@@ -11,19 +11,12 @@ function Book(title, author, pages, read) {
     author: author,
     pages: pages,
     read: read,
-    updateStatus: function () {
-      if (this.read == true) {
-        this.read = false;
-      } else {
-        this.read = true;
-      }
-    },
   };
 }
 
 let library = []; //book storage
 
-const book1 = Book("Title1", "Author1", 344, false);
+const book1 = Book("Title1", "Author1", 344, true);
 library.push(book1);
 displayBooks();
 
@@ -74,7 +67,7 @@ function createBookDiv(book, index) {
   pageDiv.innerHTML = book.pages;
   const readButton = document.createElement("button");
   readButton.classList.add("read");
-  if (book.readButton) {
+  if (book.read) {
     readButton.classList.add("true");
     readButton.innerHTML = "Read";
   } else {
