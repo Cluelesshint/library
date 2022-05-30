@@ -112,6 +112,14 @@ bookGrid.addEventListener("click", (e) => {
     deleteBook(bookID);
     clearBookGrid();
     displayBooks();
+  } else if (e.path[0].innerHTML == "Read") {
+    library[bookID].read = false;
+    clearBookGrid();
+    displayBooks();
+  } else if (e.path[0].innerHTML == "Not read") {
+    library[bookID].read = true;
+    clearBookGrid();
+    displayBooks();
   }
 });
 
