@@ -23,6 +23,10 @@ function Book(title, author, pages, read) {
 
 let library = []; //book storage
 
+const book1 = Book("Title1", "Author1", 344, false);
+library.push(book1);
+displayBooks();
+
 function getBookData() {
   //grab all book info from different inputs
 
@@ -88,7 +92,7 @@ function createBookDiv(book, index) {
   return bookDiv;
 }
 
-function displayBook() {
+function displayBooks() {
   let index = 0;
   library.forEach((book) => {
     bookDiv = createBookDiv(book, index);
@@ -102,6 +106,21 @@ function clearBookGrid() {
     bookGrid.removeChild(bookGrid.lastChild);
   }
 }
+
+function deleteBook(index) {
+  console.log(library);
+  library.splice(index, 1);
+  console.log(library);
+}
+
+bookGrid.addEventListener("click", (e) => {
+  const bookID = e.path[1].id;
+  if (e.path[0].innerHTML == "Remove") {
+    deleteBook(bookID);
+    clearBookGrid();
+    displayBooks();
+  }
+});
 
 document.onkeydown = function (e) {
   //check for escape key, if escape key deactivate the new book module
@@ -124,7 +143,7 @@ form.addEventListener("submit", (e) => {
   const book = Book(bookData[0], bookData[1], bookData[2], bookData[3]);
   library.push(book);
   clearBookInputs();
-  toggleNewBookModule("off");
   clearBookGrid();
-  displayBook();
+  toggleNewBookModule("off");
+  displayBooks();
 });
