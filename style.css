@@ -5,6 +5,7 @@
   --neutral-clr-100: #fff;
   --neutral-clr-500: #f0f0f2;
   --neutral-clr-700: lightgrey;
+  --neutral-clr-800: #1c1c1c;
   --neutral-clr-900: #0b0b0b;
 
   --cust-font-1: "custy";
@@ -39,6 +40,7 @@ body {
 .main-content.active {
   transition: 0.2s ease-in;
   opacity: 0.5;
+  pointer-events: none;
 }
 
 .header {
@@ -91,7 +93,7 @@ body {
 
 .new-book > button:hover {
   color: var(--neutral-clr-100);
-  background-color: #1c1c1c;
+  background-color: var(--neutral-clr-800);
   transition: background-color 0.2s ease-in;
 }
 
