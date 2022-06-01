@@ -3,6 +3,7 @@
 :root {
   --primary-clr-100: #6c3c91;
   --neutral-clr-100: #fff;
+  --neutral-clr-200: #f7f7f7;
   --neutral-clr-500: #f0f0f2;
   --neutral-clr-700: lightgrey;
   --neutral-clr-800: #1c1c1c;
@@ -39,7 +40,7 @@ body {
 
 .main-content.active {
   transition: 0.2s ease-in;
-  opacity: 0.5;
+  opacity: 0.3;
   pointer-events: none;
 }
 
@@ -117,10 +118,10 @@ h1 {
 .add-book-module.active {
   opacity: 1;
   min-height: 390px;
-  width: 300px;
+  width: 320px;
   border-radius: 10px;
-  border: 2px solid var(--primary-clr-100);
-  background-color: #f7f7f7;
+  border: 2px solid var(--neutral-clr-900);
+  background-color: var(--neutral-clr-200);
   position: fixed;
   top: 50%;
   left: 50%;
