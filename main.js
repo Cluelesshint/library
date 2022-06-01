@@ -16,26 +16,14 @@ function Book(title, author, pages, read) {
 
 let library = []; //book storage
 
-const book1 = Book("John Guido's World", "John Guido", 18, true);
-const book2 = Book("John Guido's World", "John Guido", 18, true);
-const book3 = Book("John Guido's World", "John Guido", 18, true);
-const book4 = Book("John Guido's World", "John Guido", 18, true);
-const book5 = Book("John Guido's World", "John Guido", 18, true);
-const book6 = Book("John Guido's World", "John Guido", 18, true);
-const book7 = Book("John Guido's World", "John Guido", 18, true);
-const book8 = Book("John Guido's World", "John Guido", 18, true);
-const book9 = Book("John Guido's World", "John Guido", 18, true);
-const book10 = Book("John Guido's World", "John Guido", 18, true);
+const book1 = Book("John's Cool Book", "John Guido", 18, true);
+const book2 = Book("John's Great Book", "John Guido", 18, true);
+const book3 = Book("John's Amazing Book", "John Guido", 18, true);
+const book4 = Book("John's Perfect Book", "John Guido", 18, true);
 library.push(book1);
 library.push(book2);
 library.push(book3);
 library.push(book4);
-library.push(book5);
-library.push(book6);
-library.push(book7);
-library.push(book8);
-library.push(book9);
-library.push(book10);
 displayBooks();
 
 function getBookData() {
