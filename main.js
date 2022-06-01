@@ -16,14 +16,18 @@ function Book(title, author, pages, read) {
 
 let library = []; //book storage
 
-const book1 = Book("John's Cool Book", "John Guido", 18, true);
-const book2 = Book("John's Great Book", "John Guido", 18, true);
-const book3 = Book("John's Amazing Book", "John Guido", 18, true);
-const book4 = Book("John's Perfect Book", "John Guido", 18, true);
+const book1 = Book("John's Cool Book", "John Guido", 104, true);
+const book2 = Book("John's Great Book", "John Guido", 222, false);
+const book3 = Book("John's Amazing Book", "John Guido", 89, true);
+const book4 = Book("John's Wacky Book", "John Guido", 430, false);
+const book5 = Book("John's Neat Book", "John Guido", 430, false);
+const book6 = Book("John's Perfect Book", "John Guido", 430, false);
 library.push(book1);
 library.push(book2);
 library.push(book3);
 library.push(book4);
+library.push(book5);
+library.push(book6);
 displayBooks();
 
 function getBookData() {
@@ -83,9 +87,11 @@ function createBookDiv(book, index) {
   const readButton = document.createElement("button");
   readButton.classList.add("read");
   if (book.read) {
+    bookDiv.setAttribute("read", "true");
     readButton.classList.add("true");
     readButton.innerHTML = "Read";
   } else {
+    bookDiv.setAttribute("read", "false");
     readButton.classList.add("false");
     readButton.innerHTML = "Not read";
   }
@@ -128,10 +134,14 @@ bookGrid.addEventListener("click", (e) => {
     clearBookGrid();
     displayBooks();
   } else if (e.path[0].innerHTML == "Read") {
+    e.path[1].classList.remove("read");
+    e.path[1].classList.add("notread");
     library[bookID].read = false;
     clearBookGrid();
     displayBooks();
   } else if (e.path[0].innerHTML == "Not read") {
+    e.path[1].classList.remove("notread");
+    e.path[1].classList.add("read");
     library[bookID].read = true;
     clearBookGrid();
     displayBooks();

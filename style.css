@@ -59,7 +59,7 @@ body {
   min-height: 500px;
   min-width: 225px;
   background-color: var(--neutral-clr-500);
-  box-shadow: inset 0px 5px 10px var(--primary-clr-100);
+  box-shadow: inset 0px 5px 10px var(--neutral-clr-900);
   grid-row: 2 / 3;
   display: flex;
   flex-direction: column;
@@ -69,7 +69,7 @@ body {
 .new-book {
   height: 10%;
   width: 100%;
-  margin-top: 10px;
+  margin-top: 20px;
   margin-bottom: 20px;
   display: flex;
   justify-content: flex-start;
@@ -79,7 +79,7 @@ body {
 .new-book > button {
   height: 2.2rem;
   width: 7.6rem;
-  border: 2px solid var(--primary-clr-100);
+  border: 2px solid var(--neutral-clr-900);
   border-radius: 5px;
   background: transparent;
   padding: 0;
@@ -92,7 +92,7 @@ body {
 
 .new-book > button:hover {
   color: var(--neutral-clr-100);
-  background-color: var(--primary-clr-100);
+  background-color: var(--neutral-clr-900);
   transition: background-color 0.2s ease-in;
 }
 
@@ -198,10 +198,9 @@ h3 {
   height: 300px;
   width: 280px;
   background-color: var(--neutral-clr-100);
-  box-shadow: 1px 1px 10px var(--neutral-clr-900);
   padding: 10px;
   border-radius: 10px;
-  border: 2px solid var(--primary-clr-100);
+  border: 2px solid var(--neutral-clr-900);
   gap: 20px;
   display: flex;
   flex-direction: column;
@@ -209,6 +208,14 @@ h3 {
   align-items: center;
   line-height: 1.2;
   text-align: center;
+}
+
+div[read="true"] {
+  box-shadow: 1px 1px 10px green;
+}
+
+div[read="false"] {
+  box-shadow: 1px 1px 10px red;
 }
 
 .book-div > div {
@@ -225,7 +232,7 @@ h3 {
 .book-div > button {
   padding: 6px;
   width: 80%;
-  border: 2px solid var(--primary-clr-100);
+  border: 2px solid var(--neutral-clr-900);
   border-radius: 5px;
   cursor: pointer;
 }
