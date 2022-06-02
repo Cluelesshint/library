@@ -45,7 +45,7 @@ body {
 
 .main-content.active {
   transition: 0.2s ease-in;
-  opacity: 0.3;
+  opacity: 0.7;
   pointer-events: none;
 }
 
@@ -151,14 +151,16 @@ h1 {
   min-height: 390px;
   width: 320px;
   border-radius: 10px;
-  border: 2px solid var(--neutral-clr-900);
-  background-color: var(--neutral-clr-200);
+  background-color: #3b444b;
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   transition: 0.2s ease-in-out;
   pointer-events: all;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
 .add-book-module {
@@ -192,16 +194,31 @@ h1 {
   border-radius: 5px;
   background: transparent;
   border: 1px solid var(--neutral-clr-900);
+  color: white;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.form > input:focus {
+  border-style: none;
 }
 
 button[type="submit"] {
   margin-top: 30px;
   height: 35px;
   width: 60%;
+  cursor: pointer;
+  background-color: #232b2b;
+  color: white;
+  border-radius: 5px;
+  border-style: none;
+}
+
+button[type="submit"]:hover {
+  background-color: #353839;
 }
 
 .read {
-  color: var(--neutral-clr-900);
+  color: white;
 }
 
 .checkbox {
@@ -223,6 +240,7 @@ h3 {
   font-size: 1.9rem;
   letter-spacing: 1px;
   padding-bottom: 15px;
+  color: white;
 }
 
 /* Book Div Style */
@@ -262,7 +280,7 @@ div[read="false"] {
   display: inline-block;
   word-wrap: break-word;
   cursor: default;
-  font-family: "neon";
+  font-family: "Times New Roman", Times, serif;
 }
 
 .book-div > button {
