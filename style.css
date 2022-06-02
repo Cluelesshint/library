@@ -214,11 +214,11 @@ h3 {
 }
 
 div[read="true"] {
-  box-shadow: 1px 1px 10px green;
+  box-shadow: green 0px 1px 2px, green 0px 6px 6px;
 }
 
 div[read="false"] {
-  box-shadow: 1px 1px 10px red;
+  box-shadow: red 0px 1px 2px, red 0px 6px 6px;
 }
 
 .book-div > div {
