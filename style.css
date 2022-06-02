@@ -17,6 +17,11 @@
   src: url(./assets/fonts/Southampton-MRqp.ttf);
 }
 
+@font-face {
+  font-family: "neon";
+  src: url(./assets/fonts/KosanNonCommercial.otf);
+}
+
 @keyframes bounce {
   0% {
     transform: translateY(0);
@@ -45,7 +50,7 @@ body {
 }
 
 .header {
-  background-color: var(--neutral-clr-100);
+  background-color: #3b444b;
   grid-row: 1 / 2;
   display: grid;
   justify-content: center;
@@ -53,15 +58,41 @@ body {
 }
 
 .title {
-  font-family: "custy";
+  font-family: "neon";
   font-size: 2.7rem;
-  letter-spacing: 6px;
+  letter-spacing: 8px;
+  text-shadow: 0 0 20px #ff005b;
+  color: white;
+}
+
+.title:after {
+  content: attr(datat-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0 20px;
+  z-index: -1;
+  color: #ff005b;
+  filter: blur(15px);
+}
+
+.title::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #fe3a80;
+  z-index: -2;
+  opacity: 0.5;
+  filter: blur(40px);
 }
 
 .content {
   min-height: 500px;
   min-width: 225px;
-  background-color: var(--neutral-clr-500);
+  background-color: #232b2b;
   box-shadow: inset 0px 5px 10px var(--neutral-clr-900);
   grid-row: 2 / 3;
   display: flex;
@@ -82,14 +113,15 @@ body {
 .new-book > button {
   height: 2.2rem;
   width: 7.6rem;
-  border: 2px solid var(--neutral-clr-900);
+  border-style: none;
   border-radius: 5px;
-  background: transparent;
+  background-color: #3b444b;
   padding: 0;
   cursor: pointer;
   box-shadow: 0px 2px 5px var(--neutral-clr-900);
   text-transform: uppercase;
   letter-spacing: 2px;
+  color: white;
 }
 
 .new-book > button:hover {
@@ -110,7 +142,6 @@ body {
 
 h1 {
   margin: 0;
-  padding-bottom: 20px;
 }
 
 /* Add Book Module */
@@ -197,13 +228,13 @@ h3 {
 /* Book Div Style */
 
 .book-div {
-  height: 300px;
+  height: 270px;
   width: 280px;
-  background-color: var(--neutral-clr-100);
-  padding: 10px;
+  background-color: #3b444b;
+  padding: 10px 10px 0px 10px;
   border-radius: 10px;
   border: 2px solid var(--neutral-clr-900);
-  gap: 20px;
+  gap: 5px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -211,6 +242,7 @@ h3 {
   line-height: 1.2;
   text-align: center;
   margin-bottom: 10px;
+  color: white;
 }
 
 div[read="true"] {
@@ -224,22 +256,26 @@ div[read="false"] {
 .book-div > div {
   height: 15%;
   width: 260px;
-  font-size: 20px;
+  font-size: 1.2rem;
   letter-spacing: 2px;
   font-weight: 900;
   display: inline-block;
   word-wrap: break-word;
   cursor: default;
+  font-family: "neon";
 }
 
 .book-div > button {
   padding: 6px;
   width: 80%;
   border: 2px solid var(--neutral-clr-900);
+  background-color: #232b2b;
   border-radius: 5px;
   cursor: pointer;
+  margin-bottom: 10px;
+  color: white;
 }
 
 .book-div > button:hover {
-  background-color: var(--neutral-clr-100);
+  background-color: #353839;
 }
